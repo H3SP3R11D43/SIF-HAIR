@@ -34,7 +34,6 @@ nav {
   flex-direction: column;
   background-color: var(--vermelho-vinho);
   border-radius: 1rem;
-  display: none;
 }
 
 .nav__links.open {
@@ -82,11 +81,11 @@ nav {
   }
 
   .nav__links {
+    display: flex;
     padding: 0.75rem 3rem;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
     gap: 3rem;
     flex-direction: row;
     max-width: fit-content;
@@ -101,3 +100,4 @@ nav {
     gap: 4rem;
   }
 }
+
