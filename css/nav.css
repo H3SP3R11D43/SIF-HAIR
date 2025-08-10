@@ -20,7 +20,6 @@ nav {
   display: none;
 }
 
-/* Código para telas menores (mobile) */
 .nav__links {
   list-style: none;
   position: absolute;
@@ -35,20 +34,29 @@ nav {
   flex-direction: column;
   background-color: var(--vermelho-vinho);
   border-radius: 1rem;
-
-  /* Alterado para que o menu desapareça com transição */
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.3s ease-in-out;
+  display: none;
+  white-space: nowrap;
+  font-weight: 500;
+  color: black;
 }
 
 .nav__links.open {
-  /* Quando a classe "open" é adicionada, o menu aparece */
-  opacity: 1;
-  visibility: visible;
+  display: flex;
 }
 
-/* Código para telas maiores (desktop) */
+.nav__links a:hover {
+  color: white;
+}
+
+.nav__menu__btn {
+  padding: 5px 11px;
+  font-size: 1.5rem;
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
 @media (width > 768px) {
   nav {
     padding: 2rem 1rem;
@@ -62,12 +70,10 @@ nav {
     display: none;
   }
 
-  /* O botão do menu é escondido */
   .nav__menu__btn {
     display: none;
   }
 
-  /* O menu é exibido como flexbox */
   .nav__links {
     padding: 0.75rem 3rem;
     top: 50%;
@@ -79,9 +85,14 @@ nav {
     max-width: fit-content;
     border-radius: 5rem;
     background-color: var(--vermelho-tijolo);
+    color: black;
+  }
+}
 
-    /* Certifique-se que o menu esteja sempre visível e sem transição */
-    opacity: 1;
-    visibility: visible;
+@media (width > 1024px) {
+  .nav__links {
+    padding: 0.75rem 4rem;
+    gap: 4rem;
+    color: black;
   }
 }
