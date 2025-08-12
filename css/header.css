@@ -1,7 +1,6 @@
 .header {
   position: relative;
   isolation: isolate;
-  background-color: var(--bege-rosado);
 }
 
 .header__container {
@@ -25,7 +24,7 @@
   left: 0;
   height: 100%;
   width: 0;
-  background-color: var(--vermelho-vinho);
+  background-color: var(--vermelho-tijolo);
   z-index: 1;
   animation: scroll-right 0.5s 0.3s linear forwards;
 }
@@ -38,24 +37,6 @@
   left: unset;
   right: 0;
   animation: scroll-left 0.5s linear forwards;
-}
-
-@keyframes scroll-right {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-@keyframes scroll-left {
-  0% {
-    width: 100%;
-  }
-  100% {
-    width: 0;
-  }
 }
 
 .header__content {
@@ -83,6 +64,80 @@
   color: var(--text-dark);
 }
 
+.btn-default {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    background-color: var(--vermelho-tijolo);
+    color: white;
+    border-radius: 15px;
+    padding: 10px 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.header__buttons {
+    display: flex;
+    flex-direction: column; /* Para que os botões fiquem um abaixo do outro */
+    align-items: center; /* Centraliza horizontalmente */
+    gap: 20px; /* Adiciona um espaço entre o botão do WhatsApp e os ícones */
+}
+
+#social-media-buttons {
+    display: flex;
+    gap: 20px; /* Espaço entre os ícones das redes sociais */
+}
+
+#buttons {
+    display: flex;
+    gap: 25px;
+}
+
+#buttons a {
+    text-decoration: none;
+    color: black;
+}
+
+#zap {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: white;
+    padding: 10px 15px;
+    font-weight: 600;
+    border-radius: var(--border-radius-1);
+    color: black;
+}
+
+#zap:hover {
+    background-color: black;
+    color: white;
+}
+
+#social-media-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+#social-media-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 40px;
+    background-color: white;
+    color: var(--vermelho-vinho);
+    font-size: 1.25rem;
+    border-radius: var(--border-radius-1);
+}
+
+#social-media-buttons a:hover {
+    color: var(--vermelho-tijolo);
+    background-color: black;
+}
+
 @media (width > 540px) {
   .header__image {
     min-height: max(75vh, 550px);
@@ -94,8 +149,8 @@
     display: grid;
     grid-template-columns:
       minmax(1rem, 1fr)
-      minmax(0, calc(var(--max-width-1) * 0.4))
-      minmax(0, calc(var(--max-width-1) * 0.6))
+      minmax(0, calc(var(--max-width) * 0.4))
+      minmax(0, calc(var(--max-width) * 0.6))
       minmax(1rem, 1fr);
     align-items: center;
   }

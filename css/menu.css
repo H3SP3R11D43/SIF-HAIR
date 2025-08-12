@@ -5,11 +5,11 @@
 }
 
 .menu .section-title {
-    color: var(--bege-rosado);
+    color: white;
 }
 
 .menu .section-title::after {
-    background-color: var(--bege-rosado);
+    background-color: white;
 }
 
 .menu .menu-list {
@@ -34,16 +34,19 @@
     aspect-ratio: 1;
     margin-bottom: 15px;
     object-fit: contain;
+    color: white;
 }
 
 .menu .menu-list .menu-item .nome {
     margin: 12px 0;
     font-size: var(--font-size-4);
     font-weight: var(--font-weight-semibold);
+    color: white;
 }
 
 .menu .menu-list .menu-item .text {
     font-size: var(--font-size-3);
+    color: white;
 }
 
 @media screen and (max-width: 1024px) {
